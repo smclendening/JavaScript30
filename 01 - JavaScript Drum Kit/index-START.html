@@ -58,6 +58,22 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+//(function() {
+  const keys = document.getElementsByClassName('key');
+
+  for (let i = 0; i < keys.length; i++) {
+    keys[i].onclick = function() { 
+      const soundKey = this.getAttribute('data-key');
+      console.log(soundKey);
+      const sound = document.querySelectorAll("audio[data-key='83']")
+      console.log('sound', sound);
+      sound[0].play();
+    };
+  }
+
+//})()
+var el = document.querySelector("div.user-panel.main input[name='login']");
+
 
 </script>
 
