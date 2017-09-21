@@ -99,6 +99,24 @@
   </div>
 
 <script>
+  const boxes = [...document.querySelectorAll('input[type="checkbox"')];
+  const items = [...document.getElementsByClassName('item')];
+  //console.log(items);
+  let shift = false;
+  //let firstBox = e.target;
+
+  items.forEach(item => {
+    item.addEventListener('click', (e) => {
+      if (e.target.matches('input') && shift) {
+
+      } else if (e.target.matches('input') && e.shiftKey) {
+        shift = true;
+        console.log(e);
+      }
+     // console.log(e.target);
+    })
+  });
+
 </script>
 </body>
 </html>
